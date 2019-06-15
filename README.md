@@ -1,3 +1,3 @@
 # Bash Scripts
 
-This is just a repository to store my bash scripts
+This is just a repository to store useful bash scripts
