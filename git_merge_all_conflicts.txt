@@ -1,0 +1,12 @@
+# Cool way of forcing all changes from one source when in a merging conflict
+
+#https://stackoverflow.com/questions/10697463/resolve-git-merge-conflicts-in-favor-of-their-changes-during-a-pull
+
+# If you're already in conflicted state, and you want to just accept all of theirs:
+git checkout --theirs .
+git add .
+
+# If you want to do the opposite:
+
+git checkout --ours .
+git add .
