@@ -1,0 +1,5 @@
+
+#https://stackoverflow.com/a/12288918/8692138
+
+# cd to directory 
+git ls-files -z | xargs -0 git update-index --assume-unchanged
