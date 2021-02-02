@@ -11,5 +11,9 @@ sudo apt install vim openconnect xrdp
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 
+# Install nordvpn
+sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
+sudo usermod -aG nordvpn $USER
+
 #------------------------------------
 # Set static IP address
