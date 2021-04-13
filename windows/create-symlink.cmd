@@ -1,1 +1,1 @@
-mklink /J C:\LinkToFolder C:\Users\Name\OriginalFolder
+mklink /J C:\destination\folder\including\new-folder-name C:\original\folder\path
