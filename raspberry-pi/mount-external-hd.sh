@@ -7,5 +7,5 @@ sudo lsblk -o UUID,NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL,MODEL
 sudo blkid
 
 # Mount a partition to a new folder
- sudo mkdir /media/pi/LTVNTFS
- sudo mount /dev/sda2 /media/pi/LTVNTFS
+ sudo mkdir /media/pi/LTVNFTS2TB
+ sudo mount /dev/sda2 /media/pi/LTVNFTS2TB
