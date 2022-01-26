@@ -2,7 +2,7 @@
 
 #https://stackoverflow.com/questions/10697463/resolve-git-merge-conflicts-in-favor-of-their-changes-during-a-pull
 
-# If you're already in conflicted state, and you want to just accept all of theirs:
+# If you're already in conflicted state, and you want to just accept all of incoming changes:
 git checkout --theirs .
 git add .
 
