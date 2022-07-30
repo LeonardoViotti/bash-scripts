@@ -11,6 +11,17 @@ sudo apt updgrade
 sudo apt install curl
 sudo apt install gcc
 
+#---------------------------
+# Snap apps 
+
+sudo snap install spotify
+sudo snap install slack
+sudo snap install bitwarden
+
+#---------------------------
+# Appimages folder
+
+mkdir Appimages
 
 #---------------------------
 # QGIS
@@ -22,7 +33,6 @@ sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
 sudo add-apt-repository "deb https://qgis.org/ubuntu $(lsb_release -c -s) main"
 sudo apt update
 sudo apt install qgis qgis-plugin-grass
-
 
 #---------------------------
 # CUDA
@@ -50,6 +60,9 @@ wget https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0
 sudo apt-get install nordvpn-release_1.0.0_all.deb
 sudo apt-get update
 sudo apt-get install nordvpn
+
+#---------------------------
+# Spotify
 
 
 
