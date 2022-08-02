@@ -11,6 +11,12 @@ sudo apt updgrade
 sudo apt install curl
 sudo apt install gcc
 
+# Nala, an alternative to apt
+echo "deb https://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
+echo "deb-src https://deb.volian.org/volian/ scar main" | sudo tee -a /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+sudo apt update && sudo apt install nala
+
 #---------------------------
 # Snap apps 
 
@@ -61,18 +67,3 @@ sudo apt-get install nordvpn-release_1.0.0_all.deb
 sudo apt-get update
 sudo apt-get install nordvpn
 
-#---------------------------
-# Spotify
-
-
-
-# Make into a function?
-# echo "Press any key to continue"
-# while [ true ] ; do
-#     read -t 3 -n 1
-#     if [ $? = 0 ] ; then
-#     exit ;
-# else
-#     echo "waiting for the keypress"
-# fi
-# done
