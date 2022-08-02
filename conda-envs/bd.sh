@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Big data local conda environment for prototyping and sketch
-
+# Big data local conda environment for prototyping and sketching
 
 conda create -n bd python=3.10
 conda activate bd
