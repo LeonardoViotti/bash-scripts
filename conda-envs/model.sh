@@ -6,5 +6,6 @@ conda create -n model python=3.10
 conda activate model
 
 pip install pygad
+pip install evotorch
 pip install semopy
 pip install plotly
