@@ -32,6 +32,20 @@ sudo snap install bitwarden
 mkdir Appimages
 
 #---------------------------
+# R
+
+# Download rstudio-download-1.2.3.deb!
+
+sudo nala install r-base-core
+
+sudo nala install dpkg-sig
+
+gpg --keyserver keyserver.ubuntu.com --recv-keys 3F32EE77E331692F
+gpg --import /tmp/rstudio.key
+dpkg-sig --verify rstudio-2022.07.1-554-amd64.deb
+sudo dpkg -i rstudio-2022.07.1-554-amd64.deb
+
+#---------------------------
 # QGIS
 
 sudo nala install gnupg software-properties-common
