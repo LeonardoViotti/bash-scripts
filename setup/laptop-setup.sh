@@ -36,14 +36,43 @@ mkdir Appimages
 
 # Download rstudio-download-1.2.3.deb!
 
-sudo nala install r-base-core
-
+# RStudio Dependencies
 sudo nala install dpkg-sig
+sudo nala install libssl1.0.0 libssl1.0.2 libssl1.1
+sudo nala install libclang-dev
+
+# Tidyverse
+sudo nala install g++
+sudo nala install libcurl4-openssl-dev libssl-dev libxml2-dev
+
+# Spatial packages
+sudo nala install libgdal-dev
+sudo nala install libgeos-dev
+
+# sf, lfe and readstata13
+sudo nala install gfortran
+sudo nala install libudunits2-dev 
+
+# For Rfast
+sudo nala install libgsl0-dev
+
+# R
+sudo nala install r-base-core
+sudo nala install r-base-dev
+
+
+# RStudio
+# wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.07.1-554-amd64.deb
+
+# From https://community.rstudio.com/t/dependency-error-when-installing-rstudio-on-ubuntu-22-04-with-libssl/135397/4
+wget https://s3.amazonaws.com/rstudio-ide-build/desktop/jammy/amd64/rstudio-2022.07.2-567-amd64.deb
+
 
 gpg --keyserver keyserver.ubuntu.com --recv-keys 3F32EE77E331692F
 gpg --import /tmp/rstudio.key
-dpkg-sig --verify rstudio-2022.07.1-554-amd64.deb
-sudo dpkg -i rstudio-2022.07.1-554-amd64.deb
+dpkg-sig --verify rstudio-2022.07.2-567-amd64.deb
+sudo dpkg -i rstudio-2022.07.2-567-amd64.deb
+
 
 #---------------------------
 # QGIS
