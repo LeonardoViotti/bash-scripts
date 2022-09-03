@@ -27,6 +27,12 @@ sudo snap install slack
 sudo snap install bitwarden
 
 #---------------------------
+# Battery optimizer
+
+sudo snap install auto-cpufreq 
+auto-cpufreq --install
+
+#---------------------------
 # Appimages folder
 
 mkdir Appimages
