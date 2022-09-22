@@ -4,8 +4,8 @@ cd ~
 
 # Nala, an alternative to apt
 
-# wget -qO https://gitlab.com/volian/volian-archive/uploads/b20bd8237a9b20f5a82f461ed0704ad4/volian-archive-keyring_0.1.0_all.deb 
-# https://gitlab.com/volian/volian-archive/uploads/d6b3a118de5384a0be2462905f7e4301/volian-archive-nala_0.1.0_all.deb
+wget https://gitlab.com/volian/volian-archive/uploads/b20bd8237a9b20f5a82f461ed0704ad4/volian-archive-keyring_0.1.0_all.deb 
+wget https://gitlab.com/volian/volian-archive/uploads/d6b3a118de5384a0be2462905f7e4301/volian-archive-nala_0.1.0_all.deb
 
 sudo apt install ./volian-archive*.deb
 echo "deb-src https://deb.volian.org/volian/ scar main" | sudo tee -a /etc/apt/sources.list.d/volian-archive-scar-unstable.list
@@ -24,6 +24,13 @@ sudo nala install vim
 
 
 #---------------------------
+# Git
+
+sudo nala install git-all
+git config --global user.email "leonardoviotti@gmail.com"
+git config --global user.name "LeonardoViotti"
+
+#---------------------------
 # Snap apps 
 
 sudo snap install spotify
@@ -37,9 +44,24 @@ sudo snap install auto-cpufreq
 auto-cpufreq --install
 
 #---------------------------
-# Appimages folder
+# Appimages 
+
+sudo add-apt-repository universe
+sudo nala install libfuse2
 
 mkdir Appimages
+
+# Obsidian
+wget https://github.com/obsidianmd/obsidian-releases/releases/download/v0.15.9/Obsidian-0.15.9.AppImage
+chmod 775 Obsidian-0.15.9.AppImage
+
+mv Obsidian-0.15.9.AppImage ~/Appimages/
+
+printf "[Desktop Entry]\nType=Application\nName=Obsidian\nComment=Obsidian\nIcon=/home/leonardo/Appimages/Obsidian-icon.png\nExec=/home/leonardo/Appimages/Obsidian-0.15.9.AppImage\nTerminal=false\nCategories=Office" > ~/.local/share/applications/obsidian.desktop
+
+wget --output-document=test.png https://play.google.com/store/apps/details?id=md.obsidian&hl=en_US&gl=US
+
+
 
 #---------------------------
 # R
@@ -122,3 +144,4 @@ sudo nala install nordvpn-release_1.0.0_all.deb
 sudo nala update
 sudo nala install nordvpn
 
+sudo usermod -aG nordvpn $USER
