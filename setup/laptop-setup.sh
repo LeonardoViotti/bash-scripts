@@ -2,21 +2,22 @@
 
 cd ~
 
-sudo nala update
-sudo nala updgrade
-
-
-# Nala, an alternative to nala
+# Nala, an alternative to apt
 echo "deb https://deb.volian.org/volian/ scar main" | sudo tee /etc/nala/sources.list.d/volian-archive-scar-unstable.list
 wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/nala/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
 echo "deb-src https://deb.volian.org/volian/ scar main" | sudo tee -a /etc/nala/sources.list.d/volian-archive-scar-unstable.list
-sudo nala update && sudo nala install nala
+sudo apt update && sudo apt install nala
+
+sudo nala update
+sudo nala updgrade
 
 #---------------------------
 # Utils
 
 sudo nala install curl
 sudo nala install gcc
+
+
 
 
 #---------------------------
