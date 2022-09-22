@@ -3,10 +3,14 @@
 cd ~
 
 # Nala, an alternative to apt
-echo "deb https://deb.volian.org/volian/ scar main" | sudo tee /etc/nala/sources.list.d/volian-archive-scar-unstable.list
-wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/nala/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
-echo "deb-src https://deb.volian.org/volian/ scar main" | sudo tee -a /etc/nala/sources.list.d/volian-archive-scar-unstable.list
+
+# wget -qO https://gitlab.com/volian/volian-archive/uploads/b20bd8237a9b20f5a82f461ed0704ad4/volian-archive-keyring_0.1.0_all.deb 
+# https://gitlab.com/volian/volian-archive/uploads/d6b3a118de5384a0be2462905f7e4301/volian-archive-nala_0.1.0_all.deb
+
+sudo apt install ./volian-archive*.deb
+echo "deb-src https://deb.volian.org/volian/ scar main" | sudo tee -a /etc/apt/sources.list.d/volian-archive-scar-unstable.list
 sudo apt update && sudo apt install nala
+
 
 sudo nala update
 sudo nala updgrade
@@ -16,8 +20,7 @@ sudo nala updgrade
 
 sudo nala install curl
 sudo nala install gcc
-
-
+sudo nala install vim
 
 
 #---------------------------
