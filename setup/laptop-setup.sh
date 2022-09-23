@@ -135,6 +135,7 @@ sudo dpkg -i cuda-repo-ubuntu2204-11-7-local_11.7.0-515.43.04-1_amd64.deb
 sudo cp /var/cuda-repo-ubuntu2204-11-7-local/cuda-*-keyring.gpg /usr/share/keyrings/
 sudo nala update
 sudo nala -y install cuda
+# sudo nala install nvidia-cuda-toolkit
 
 #---------------------------
 # NordVPN
