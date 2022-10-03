@@ -21,7 +21,9 @@ sudo nala updgrade
 sudo nala install curl
 sudo nala install gcc
 sudo nala install vim
-
+# sudo nala install terminator
+sudo nala install -y tilix
+sudo nala install ffmpeg
 
 #---------------------------
 # Git
@@ -29,6 +31,8 @@ sudo nala install vim
 sudo nala install git-all
 git config --global user.email "leonardoviotti@gmail.com"
 git config --global user.name "LeonardoViotti"
+git config --global core.editor "vim"
+
 
 #---------------------------
 # Snap apps 
@@ -61,7 +65,11 @@ printf "[Desktop Entry]\nType=Application\nName=Obsidian\nComment=Obsidian\nIcon
 
 wget --output-document=test.png https://play.google.com/store/apps/details?id=md.obsidian&hl=en_US&gl=US
 
+#---------------------------
+# Conda
 
+wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+bash Anaconda3-2022.05-Linux-x86_64.sh
 
 #---------------------------
 # R
@@ -94,16 +102,18 @@ sudo nala install r-base-dev
 
 
 # RStudio
-# wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.07.1-554-amd64.deb
 
-# From https://community.rstudio.com/t/dependency-error-when-installing-rstudio-on-ubuntu-22-04-with-libssl/135397/4
+# # From https://community.rstudio.com/t/dependency-error-when-installing-rstudio-on-ubuntu-22-04-with-libssl/135397/4
 wget https://s3.amazonaws.com/rstudio-ide-build/desktop/jammy/amd64/rstudio-2022.07.2-567-amd64.deb
 
-
 gpg --keyserver keyserver.ubuntu.com --recv-keys 3F32EE77E331692F
-gpg --import /tmp/rstudio.key
+# gpg --import /tmp/rstudio.key
 dpkg-sig --verify rstudio-2022.07.2-567-amd64.deb
 sudo dpkg -i rstudio-2022.07.2-567-amd64.deb
+
+# sudo nala install gdebi-core
+# wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.07.2-576-amd64.deb
+# sudo gdebi rstudio-server-2022.07.2-576-amd64.deb
 
 
 #---------------------------
