@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Other considerations:
+#   - If there is a NVIDIA GPU available, configure it to be "On demand" to avoid using it for laptop monitor.
+
 cd ~
 
 # Nala, an alternative to apt
