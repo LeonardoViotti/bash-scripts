@@ -10,5 +10,5 @@ pip install jupyterlab
 pip install earthengine-api
 pip install geemap
 pip install geopandas
-# pip install folium
+pip install folium
 

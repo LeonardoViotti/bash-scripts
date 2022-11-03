@@ -2,11 +2,13 @@
 
 # Enviroment for protyping and modelling
 
-conda create -n model python=3.10
+# bash -i model.sh
+
+conda create -n model python=3.10 -y
 conda activate model
 
-conda install -c conda-forge plotnine
 pip install pygad
 pip install evotorch
 pip install semopy
 pip install plotly
+pip install plotnine

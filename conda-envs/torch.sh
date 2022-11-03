@@ -15,3 +15,4 @@ pip install opencv-python
 # Other libraries
 pip install opensoundscape==0.7.0
 pip install boto3
+pip install split-folders[full]
