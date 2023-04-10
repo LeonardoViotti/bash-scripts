@@ -8,7 +8,8 @@ conda create -n model python=3.10 -y
 conda activate model
 
 pip install pygad
-pip install evotorch
+# pip install evotorch
+pip install numba
 pip install semopy
 pip install plotly
 pip install plotnine
