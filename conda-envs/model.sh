@@ -9,7 +9,9 @@ conda activate model
 
 pip install pygad
 pip install evotorch
-pip install semopy
+# pip install semopy
+pip install numba
+pip install tqdm
 pip install plotly
 pip install plotnine
 
