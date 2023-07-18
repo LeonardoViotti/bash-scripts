@@ -11,3 +11,4 @@ conda activate ghat
 pip install youtube_dl
 pip install pytube
 pip install selenium
+pip install requests
