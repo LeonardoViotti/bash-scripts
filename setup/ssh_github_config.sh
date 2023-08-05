@@ -14,10 +14,10 @@ ls ~/.ssh
 # Create a new ssh (rsa) key.
 
 
-ssh-keygen -t rsa -b 4096 -C "leonardoviotti@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "[Same e-mail used for github account]"
 # -t defines the type
 # -b specifies the bites that github needs
-# -C I don't really know why I need to put my e-mail, saw it on youtube
+# -C comment 
 
 # Use the default file, i.e. just press enter when asked for the file
 # Define a passphrase (password)
