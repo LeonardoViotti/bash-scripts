@@ -14,9 +14,11 @@ sudo apt install libopencv-dev python3-opencv
 pip install opencv-python
 
 # Jupyter
-pip install jupyterlab 
+pip install jupyterlab
 
 # Other libraries
 pip install pandas
-pip install opensoundscape
+pip install wandb
+
+pip install opensoundscape==0.9.1
 pip install split-folders[full]
